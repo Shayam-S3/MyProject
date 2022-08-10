@@ -53,7 +53,7 @@ public class Testing1 {
 					}
 				}
 			} else {
-				System.out.println("Account not found");
+				System.out.println("Account not ");
 			}
 		} else if (i == 3) {
 			System.out.println("Enter account number");
