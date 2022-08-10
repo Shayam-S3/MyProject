@@ -1,39 +1,22 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Automate PR
-
-# Controls when the workflow will run
+name: Demo to create automatic PR
+        
 on:
-  # Triggers the workflow on push or pull request events but only for the "Master" branch
   push:
-    branches: [ "PreProd" ]
-  
+    branches:
+      - main
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  updateAuthor:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: checkout code
-      - uses: actions/checkout@v3
+      - name: checking out code
+        uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-          
-      - name: Create PR
-        uses: Shayam-S3/create-pull-request@v3
+      - name: Raise PR
+        uses: peter-evans/create-pull-request@v3
         with:
           branch: "PreProd"
-          base: "Master"
-          title: "PreProd to Master"
+          base: Master
+          title: "demo for auto pr"
           token: ${{secrets.GITHUB_TOKEN}}
           delete-branch: false
