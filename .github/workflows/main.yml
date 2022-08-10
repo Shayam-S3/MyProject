@@ -6,17 +6,17 @@ on:
       - "PreProd"
 
 jobs:
-  updateAuthor:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checking out code
-        uses: actions/checkout@v2
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checking out code
+              uses: actions/checkout@v2
 
-      - name: Raise PR
-        uses: peter-evans/create-pull-request@v3
-        with:
-          branch: "PreProd"
-          base: Master
-          title: "demo for auto pr"
-          token: ${{secrets.GITHUB_TOKEN}}
-          delete-branch: false
+            - name: Raise PR
+              uses: peter-evans/create-pull-request@v3
+              with:
+                  branch: "PreProd"
+                  base: Master
+                  title: "demo for auto pr"
+                  token: ${{secrets.GITHUB_TOKEN}}
+                  delete-branch: false
