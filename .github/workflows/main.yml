@@ -1,14 +1,13 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Automate PR
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "Master" branch
   push:
-    branches: [ "Master" ]
-  pull_request:
-    branches: [ "Master" ]
+    branches: [ "PreProd" ]
+  
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,6 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: checkout code
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Create PR
+        uses: Shayam-S3/create-pull-request@v3
+        with:
+          branch: "PreProd"
+          base: "Master"
+          title: "PreProd to Master"
+          token: ${{secrets.GITHUB_TOKEN}}
+          delete-branch: false
