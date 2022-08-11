@@ -13,6 +13,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          destination_branch: "Master"
           commit-message: Add report file
           title: '[Example] Add report file'
           body: >
