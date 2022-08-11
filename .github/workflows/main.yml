@@ -13,7 +13,6 @@ jobs:
               uses: peter-evans/create-pull-request@v3
               with:
                   branch: "PreProd"
-                  run: echo "preprod"
                   base: "Master"
                   title: "demo for auto pr"
                   token: ${{secrets.GITHUB_TOKEN}}
