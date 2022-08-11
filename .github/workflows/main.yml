@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [PreProd]
+    branches: [Master]
 name: create-pull-request workflow
 jobs:
   createPullRequest:
@@ -12,7 +12,7 @@ jobs:
       - uses: repo-sync/pull-request@v2
         name: pull-request
         with:
-          destination_branch: "Master"
+          destination_branch: "PreProd"
           pr_title: "Pulling ${{ github.ref }} into main"
           pr_body: "👑 *An automated PR*"
           pr_reviewer: "kingdonb"
