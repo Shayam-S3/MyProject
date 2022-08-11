@@ -31,7 +31,7 @@ public class Testing1 {
 
 	public static void bankApplication(int i) {
 		if (i == 1) {
-			System.out.println("Enter your names for");
+			System.out.println("Enter your names for bank passbook");
 			Name = sc.next();
 			bankCustomers.put("Name", Name);
 			bankCustomers.put("Account_Number", Name + "_" + "123");
