@@ -3,15 +3,12 @@ name: Demo to create automatic PR
 on:
   push:
     branches:
-      - "Master"
+      - "PreProd"
 
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - name: checking out code
-              uses: actions/checkout@v2
-
             - name: Raise PR
               uses: peter-evans/create-pull-request@v3
               with:
