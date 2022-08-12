@@ -43,7 +43,7 @@ public class Testing1 {
 
 		} else if (i == 2) {
 			System.out.println("Enter your account number");
-			System.out.println("shayam sundar");
+			System.out.println("changed to private");
 			String acc = sc.next();
 			System.out.println("Enter your pin number");
 			String pin_num = sc.next();
