@@ -16,5 +16,5 @@ jobs:
           pr_title: "Pulling ${{ github.ref }} into PreProd"
           pr_body: "👑 *An automated PR*"
           pr_reviewer: "Shayam-S3"
-          pr_draft: true
+          pr_draft: false
           github_token: ${{ secrets.GITHUB_TOKEN }}
