@@ -13,8 +13,8 @@ jobs:
         name: pull-request
         with:
           destination_branch: "PreProd"
-          pr_title: "Pulling ${{ github.ref }} into main"
+          pr_title: "Pulling ${{ github.ref }} into PreProd"
           pr_body: "👑 *An automated PR*"
-          pr_reviewer: "kingdonb"
+          pr_reviewer: "Shayam-S3"
           pr_draft: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
