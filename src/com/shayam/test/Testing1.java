@@ -35,7 +35,7 @@ public class Testing1 {
 			Name = sc.next();
 			bankCustomers.put("Name", Name);
 			bankCustomers.put("Account_Number", Name + "_" + "123");
-			System.out.println("Enter your new pin number");
+			System.out.println("Enter your new pin");
 			Pin = sc.next();
 			bankCustomers.put("Pin", Pin);
 			bankCustomers.put("Balance", "0");
