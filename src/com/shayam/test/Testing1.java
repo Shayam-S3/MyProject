@@ -39,7 +39,7 @@ public class Testing1 {
 			Pin = sc.next();
 			bankCustomers.put("Pin", Pin);
 			bankCustomers.put("Balance", "0");
-			System.out.println("Account successfully created");
+			System.out.println("Account created");
 
 		} else if (i == 2) {
 			System.out.println("Enter your account number");
