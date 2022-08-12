@@ -31,7 +31,7 @@ public class Testing1 {
 
 	public static void bankApplication(int i) {
 		if (i == 1) {
-			System.out.println("Enter your names for bank passbook");
+			System.out.println("Enter your name for bank a");
 			Name = sc.next();
 			bankCustomers.put("Name", Name);
 			bankCustomers.put("Account_Number", Name + "_" + "123");
@@ -39,7 +39,7 @@ public class Testing1 {
 			Pin = sc.next();
 			bankCustomers.put("Pin", Pin);
 			bankCustomers.put("Balance", "0");
-			System.out.println("Account successfully created");
+			System.out.println("Account created");
 
 		} else if (i == 2) {
 			System.out.println("Enter your account number");
