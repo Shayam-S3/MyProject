@@ -1,6 +1,6 @@
 on:
-  push:
-    branches: [Master]
+  repository_dispatch:
+    types: [run-ping]
 name: create-pull-request workflow
 jobs:
   createPullRequest:
