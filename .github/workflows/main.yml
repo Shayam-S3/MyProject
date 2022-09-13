@@ -1,6 +1,5 @@
 on:
-  repository_dispatch:
-    types: [run-ping]
+  workflow_dispatch:
 name: create-pull-request workflow
 jobs:
   createPullRequest:
