@@ -1,6 +1,5 @@
 on:
-  push:
-    branches: [Master]
+  workflow_dispatch:
 name: create-pull-request workflow
 jobs:
   createPullRequest:

@@ -19,7 +19,7 @@ public class Testing1 {
 		// TODO Auto-generated method stub
 		int i = 0;
 		while (i < 4) {
-			System.out.println("1. Create Account");
+			System.out.println("1. Create new Account");
 			System.out.println("2. Check Balanace");
 			System.out.println("3. Deposit Amount");
 			System.out.println("4. Exit");
